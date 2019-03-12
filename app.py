@@ -16,5 +16,11 @@ def dice():
     return render_template("dice.html", result=result)
 
 
+@app.route("/greet/<username>", methods=["POST"])
+def greet(username):
+    return render_template("greet.html", xxx=username)  # 左側のusernameは引数、右側のusernameは入力値
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
